@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onclick Button</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function calculate(a){
+            var x = parseInt(document.calcform.num1.value);
+            var y = parseInt(document.calcform.num2.value);
+            var z = document.calcform.result;
+            
+            if(a.value=="Add"){
+                z.value = x + y;
+            }else if(a.value=="Sub"){
+                z.value = x - y;
+            }else if(a.value=="Multi"){
+                z.value = x * y;
+            }else if(a.value == "Div"){
+                if (y==0) {
+                    alert("Error! Division by zero is not allowed.");  
+                    return false;  
+                } else { 
+                    z.value = x / y;
+                }
+            }else{
+                z.value = x%y;
+            }
+
+
+        }
+    </script>
+
+
+
+
+</head>
+<body>
+    <form name="calcform">
+        <label for="num1">Number 1: </label><input type="text" name="num1" id="num1" required><br>
+        <label for="num2">Number 2: </label><input type="text" name="num2" id="num2" required><br>
+        <label for="result">Result:</label><input type="text" name="result" id="result"><br>
+        <input type="button" value="Add" name = "Add" onclick="calculate(this)">
+        <input type="button" value="Sub" name = "Sub" onclick="calculate(this)">
+        <input type="button" value="Multi" name = "Add" onclick="calculate(this)">
+        <input type="button" value="Div" name = "Add" onclick="calculate(this)">
+        <input type="button" value="Mod" name = "Add" onclick="calculate(this)">
+        
+
+    </form>
+</body>
+</html>

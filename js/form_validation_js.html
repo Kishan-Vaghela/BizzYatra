@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation </title>
+    <script>
+        function validation(){
+            var email = document.form.email.value;
+            var password = document.form.pass.value;
+            var phoneno =  document.form.num.value;
+            if(email == ""){
+                alert("Email should be Empty it is mandatory!");
+                document.form.email.focus();
+                return false;
+            }else if(password == ""){
+                alert("Password is Mandatory!");
+                Document.form.pass.focus();
+                return false;
+            }else if(phoneno == ""){
+                alert("Phone is Mandatory!")
+                document.form.num.focus();
+                return false;
+            } else {
+                alert( "Welcome! You have registered successfully.");
+                document.form.submit.focus(); 
+                return true;
+        }
+
+        }
+
+
+    </script>
+</head>
+<body>
+    <form >
+        <form name="form" onsubmit="validation()">
+            Email : <input type="email" name="email" id="email"><br><br>
+            Password: <input type="password" name="pass" id="pass"  minlength="5" maxlength="8"><br><br>
+            Phone No.: <input type="number" name="num" id="num" maxlength="10">
+            <input type="submit"  value="submit">
+        </form>  
+    </form>
+</body>
+</html>

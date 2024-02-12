@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Dropdown</title>
+    <script>
+        function validation(){
+            var color = document.form.color.value;
+            if(color == ""){
+                alert("Please select color");
+                document.form.color.focus();
+                return false;
+            }else{
+                alert("LogIn Successfully!")
+            }
+        }
+        function change(color){
+            document.bgColor = color;
+
+
+        }
+    </script>
+</head>
+<body>
+    <form action="number_validation.html" name="form" onsubmit="return validation()">
+        <select OnChange="change(this.value)" name="color">
+            <option value="">Select a Color</option>
+            <option value="green">Green</option>
+            <option value="blue">Blue</option>
+            <option value="red">Red</option>
+            <option value="purple">Purple</option>
+        </select>
+    <input type="submit" name="submit">
+    </form>
+</body>
+</html>

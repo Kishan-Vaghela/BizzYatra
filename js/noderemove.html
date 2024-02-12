@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remove Node - JS</title>
+
+    <script>
+        function handleremove(){
+            var x = document.getElementById("div1");
+            var y = document.getElementById("p2");
+            x.removeChild(y);
+        }
+    </script>
+</head>
+<body>
+    <div id ="div1">
+        <p id = "p1">Everything you can imagine is real!</p>
+        <p id = "p2">Imagination is more important than knowledge!</p>
+    </div>
+    <input type="button" value="Remove" id="remove" onclick="handleremove()">
+</body>
+</html>

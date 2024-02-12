@@ -1,0 +1,32 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details</title>
+    <script>
+        var product = {
+            id: 13,
+            book: "Javascript Fundamenetal",
+            description: "Its  a good book for beginners.",
+            normalprice: 580,
+            discountpercentage: 10,
+            calcDisc: function () {
+                return this.normalprice - (this.normalprice * (this.discountpercentage / 100));
+            },
+            displayPorudtDetails: function () {
+                document.write(this.id + "<br/>");
+                document.write(this.book + "<br/>");
+                document.write(this.description + "<br/>");
+                document.write(this.calcDisc());
+            }
+        }
+        product.displayPorudtDetails();
+    </script>
+</head>
+<body>
+
+
+
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html>
+
+    <body>
+
+        <h1>The Element Object</h1>
+
+        <h2>The removeChild() Method</h2>
+
+        <p>Click "Remove" to remove the first item from the list:</p>
+
+        <button onclick="removeChildFunction()">Remove</button><br />
+
+        <button onclick="addChildFunction()">Add<button />
+
+            <div id="devices">
+
+                <p id="laptop">Laptop - $1000</p><br />
+
+                <p id="cellphone">CellPhone - $350</p>
+
+            </div>
+
+            <script>
+
+   function removeChildFunction() {
+
+       var devicelist = document.getElementById("devices");
+
+       var cellphone = document.getElementById("cellphone");
+
+       devicelist.removeChild(cellphone);
+
+   }
+
+   function addChildFunction(){
+
+      var devicelist = document.getElementById("devices");
+
+      var newDevice = document.createElement("p");
+
+      var text = document.createTextNode("TV - $800");
+
+      newDevice.appendChild(text);
+
+      devicelist.appendChild(newDevice);
+
+  }
+
+</script>
+
+        </body>
+
+        </html

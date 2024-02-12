@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number validation</title>
+    <script>
+        function validation(){
+            var x = document.form.num.value;
+            if(isNaN(x) || x< 1 || x > 100){
+                alert("Please enter number between 1 - 100!");
+                document.form.num.focus();
+                return false;
+            }else{
+                alert("LogIn Successfully!");
+            }
+        }
+    </script>
+
+    
+</head>
+<body>
+    <h3>Please enter number between 1-10 </h3>
+    <form action="form_validation.html" name="form" onsubmit= "return validation()">
+        Number : <input type="number" id="num" name="num">
+        <input type="submit"  value="submit">
+    </form>
+</body>
+</html>

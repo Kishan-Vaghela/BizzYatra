@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade System - function</title>
+</head>
+
+<body>
+    <script>
+        function gradecalc() {
+            var math = parseInt(prompt("Enter your Math mark:"));
+            var physics = parseInt(prompt("Enter your Physics mark:"));
+            var chem = parseInt(prompt("Enter your Chemistry mark:"));
+            var avarage = ((math + physics + chem) / 3)
+            function avg() {
+                document.write("Your average is: " + avarage);
+
+            }
+            if (avarage >85) {
+                document.write("Your grade is A");
+            }
+            else if (avarage > 60 && avarage < 85) {
+                document.write("Your grade is B");
+            }
+            else if (avarage >35 && avarage < 60) {
+                document.write("Your grade is C");
+            }
+            else if(avarage <= 35){
+                document.write("Result :Failed")
+            }
+
+        }
+
+        gradecalc();
+    </script>
+
+</body>
+
+</html>

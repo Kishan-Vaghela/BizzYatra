@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM - Javascript</title>
+    <script>
+        function handleHTML(){
+            document.getElementById("demo").align="center";
+            document.getElementById("js1").src = "img/js1.png";
+            document.getElementById("js1").style.margin = "0 auto";
+            document.getElementById("js1").style.display = "block";
+            document.getElementById("js1").style. border = "5px solid #555";
+            document.getElementById("demo").style.fontFamily = "Georgia, serif";
+            document.getElementById("demo").style.fontSize = "40px";
+            document.getElementById("demo1").style.color ="blue";
+            document.getElementById("demo1").align ="center";
+            
+
+}
+    
+    </script>
+</head>
+<body onload="handleHTML()">
+    <p id = "demo">Javascript</p>
+    <p id = "demo1">PHP</p>
+    <img src="img/js.png" alt="Javascript" id="js1">
+    
+
+</body>
+</html>

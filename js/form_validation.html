@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form - JS</title>
+    <script>
+        function validation(){
+            var email = document.form.email.value;
+            var password = document.form.pass.value;
+            if(email ==""){
+                alert("Email is mandatory!");
+                document.form.email.focus();
+                return false;
+            }else if(password == ""){
+                alert("Password is mandatory!");
+                document.form.password.focus();
+                return false;
+            } else {
+                alert( "Welcome! You have registered successfully.");
+                document.form.submit.focus(); 
+                return true;
+        }
+    }
+    </script>
+</head>
+<body>
+    <form  name="form" onsubmit="return validation()">
+        Email : <input type="email" name="email" id="email"><br><br>
+        Password: <input type="password" name="pass" id="pass" ><br><br>
+        <input type="submit"  value="submit">
+    </form>    
+</body>
+</html>

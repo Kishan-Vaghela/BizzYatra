@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grading System</title>
+
+</head>
+
+<body>
+    <script>
+        var php = parseInt(prompt("Enter Your PHP Score"));
+        var Javascript = parseInt(prompt("Enter Your JS Score"));
+        var dotnet = parseInt(prompt("Enter Your .Net Score"));
+
+        var total = php + Javascript + dotnet;
+        document.write("<h2>Your Total Marks are " + total + " </h2>");
+
+        var average = total / 3;
+        document.write("Your Average is " + average + "<br/>");
+
+        if (php >= 35 && Javascript >= 35 && dotnet >= 35) {
+            if (average >= 35 && average < 50) {
+                document.write("Grade: C" + "<br\>");
+            } else if(average >= 45 && average < 60) {
+                document.write("Grade: B" + "<br\>");
+            }else {
+                document.write("Grade: A"+ "<br\>");
+
+            }
+        }
+
+        else{
+                document.write("Result:Failed");
+            }
+
+    </script>
+</body>
+
+</html>

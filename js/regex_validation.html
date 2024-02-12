@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation - JS</title>
+    <script src=""></script>
+    <script>
+        function validate (){
+            var valid = false;
+
+            var email_exp = /^([A-Za-z0-9_\-.])+@([A-Za-z0-9_\-.])+\.([A-Za-z]{2,4})$/;
+            var password_exp = /^[A-Za-z0-9]{5,8}$/;
+            var phone_exp = /^[0-9]{10}$/;
+
+            var email = document.myform.email.value;
+            var password = document.myform.password.value;
+            var phone = document.myform.phone.value;
+            if(!email_exp.test(email)){
+                alert("Email Is Mandatory!");
+                document.myform.email.focus();
+                return false;
+            }
+            if(!password_exp.test(password)){
+                alert("Password Is Mandatory!");
+                document.myform.password.focus();
+                return false;
+            }
+            if(!phone_exp.test(phone)){
+                alert("Please input 10 numbers");
+                document.myform.phone.focus();
+                return false;
+            }
+
+            alert("Validation Successfull");
+        }
+    </script>
+</head>
+<body>
+    <h3>User registration</h3>
+    <form name="myform" onsubmit="return validate()">
+        Email: <input type="text" name="email" id=""><br><br>
+        Password: <input type="text" name="password" id=""><br><br>
+        Phone: <input type="text" name="phone" id=""><br><br>
+
+        <input type="submit" value="Submit" id="">
+    </form>
+</body>
+</html>

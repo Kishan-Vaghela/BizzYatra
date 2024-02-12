@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>onchange</title>
+    <script>
+        function handleOnChangeEvent(x){
+            document.body.style.backgroundImage = "url('"+x+"')"
+        }
+    </script>
+
+
+
+</head>
+<body>
+    <select OnChange="handleOnChangeEvent(this.value)">
+        <option value="">Select a Image</option>
+        <option value="img/banner.png">Banner</option>
+        <option value="img/logo copy.png">PHP Logo</option>
+        <option value="img/logo.png">Logo</option>
+    </select>
+    
+</body>
+</html>

@@ -1,0 +1,31 @@
+<html>
+<head>
+    <title>Key Up and Key Down</title>
+
+    <script>
+        function handleKeyDownEvent(htmlElement) {
+            htmlElement.style.color = "black";
+            htmlElement.style.backgroundColor = "white";
+        }
+
+        function handleKeyUpEvent(htmlElement) {
+            htmlElement.style.color = "black";
+            htmlElement.style.backgroundColor = "white";
+        }
+
+        function handleKeyPressEvent(htmlElement) {
+            htmlElement.style.color = "white";
+            htmlElement.style.backgroundColor = "black";
+        }
+    </script>
+</head>
+
+<body>
+    <input type="text"
+        onkeydown="handleKeyDownEvent(this)"
+        onkeyup="handleKeyUpEvent(this)" 
+        onkeypress="handleKeyPressEvent(this)"
+    />
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CheckedBox - Validation</title>
+    <script>
+        function validation() {
+            var valid = false;
+            if (document.getElementById("javascript").checked) {
+                valid = true;
+            }
+            else if (document.getElementById("php").checked) {
+                valid = true;
+            }
+            else if (document.getElementById("jquery").checked) {
+                valid = true;
+            }
+            else if (document.getElementById("c++").checked) {
+                valid = true;
+            }
+            if (valid) {
+                alert("LogIn Successfully");
+            } else {
+                alert("Please selecte a technology!");
+                return false;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <h3>Please Select Technology of your choice</h3>
+    <form name="form" onsubmit="return validation()">
+        <input type="checkbox" id="javascript" value="javascript">Javascript
+        <input type="checkbox" id="php" value="php">PHP
+        <input type="checkbox" id="jquery" value="jquery">Jquery
+        <input type="checkbox" id="c++" value="c++"> C++
+        <input type="submit" value="submit">
+    </form>
+</body>
+
+</html>
